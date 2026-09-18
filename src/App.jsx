@@ -81,7 +81,7 @@ function App() {
   };
   return (
     <Router>
-      <main className="min-h-screen p-4 w-full max-w-[1800px] mx-auto flex flex-col gap-4">
+      <main className="min-h-screen p-4 w-full max-w-[1450px] mx-auto flex flex-col gap-4">
         <Header searchProps={searchProps} />
         <Routes>
           <Route
