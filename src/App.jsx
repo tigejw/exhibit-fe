@@ -5,6 +5,7 @@ import ArtworkViewPage from "./pages/Artwork";
 import ExhibitViewPage from "./pages/Exhibit";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Header from "./components/Header";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -80,45 +81,45 @@ function App() {
   };
   return (
     <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <HomePage
-              searchProps={searchProps}
-              exhibits={exhibits}
-              setExhibits={setExhibits}
-              exhibitsLoading={exhibitsLoading}
-               error={error}
-            />
-          }
-        />
-        <Route
-          path="/search"
-          element={
-            <SearchResultsPage
-              results={results}
-              searchProps={searchProps}
-              loading={loading}
-              error={error}
-            />
-          }
-        />
-        <Route
-          path="/artwork/:artworkId"
-          element={
-            <ArtworkViewPage
-              searchProps={searchProps}
-              results={results}
-              exhibits={exhibits}
-            />
-          }
-        />
-        <Route
-          path="/exhibit/:exhibitId"
-          element={<ExhibitViewPage searchProps={searchProps} />}
-        />
-      </Routes>
+      <main className="min-h-screen p-4 w-full max-w-[1800px] mx-auto flex flex-col gap-4">
+        <Header searchProps={searchProps} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                exhibits={exhibits}
+                setExhibits={setExhibits}
+                exhibitsLoading={exhibitsLoading}
+                error={error}
+              />
+            }
+          />
+          <Route
+            path="/search"
+            element={
+              <SearchResultsPage
+                results={results}
+                loading={loading}
+                error={error} 
+              />
+            }
+          />
+          <Route
+            path="/artwork/:artworkId"
+            element={
+              <ArtworkViewPage
+                results={results}
+                exhibits={exhibits}
+              />
+            }
+          />
+          <Route
+            path="/exhibit/:exhibitId"
+            element={<ExhibitViewPage/>}
+          />
+        </Routes>
+      </main>
     </Router>
   );
 }

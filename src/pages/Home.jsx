@@ -1,9 +1,8 @@
-import Header from "../components/Header";
 import ExhibitShowcase from "../components/ExhibitsShowcase";
 import { useState } from "react";
 import axios from "axios";
 
-export default function HomePage({ searchProps, exhibits, setExhibits, exhibitsLoading, error }) {
+export default function HomePage({ exhibits, setExhibits, exhibitsLoading, error }) {
   const [showForm, setShowForm] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -31,7 +30,6 @@ export default function HomePage({ searchProps, exhibits, setExhibits, exhibitsL
   };
   return (
     <div className="home-container">
-      <Header searchProps={searchProps} />
       <main>
         <div className="exhibits-header-row">
           <h2 className="section-title">Exhibits</h2>

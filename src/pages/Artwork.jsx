@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
 import axios from "axios";
 
-export default function ArtworkViewPage({ searchProps, exhibits }) {
+export default function ArtworkViewPage({exhibits }) {
   const { artworkId } = useParams();
   const [artwork, setArtwork] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -17,6 +16,7 @@ export default function ArtworkViewPage({ searchProps, exhibits }) {
       .get(`https://exhibit-mw48.onrender.com/artwork/${artworkId}`)
       .then((res) => {
         setArtwork(res.data.artwork);
+        console.log("pingpingpingping", res.data.artwork)
         setLoading(false);
       })
       .catch((err) => {
@@ -44,7 +44,6 @@ export default function ArtworkViewPage({ searchProps, exhibits }) {
   if (loading) return <p>Loading...</p>;
   return (
     <>
-      <Header searchProps={searchProps} />
       {error ? <p className="error">{error}, try again later?</p> : !artwork ? <p>Artwork not found.</p> :
       <div className="artwork-view-container">
         <div className="artwork-image-section">

@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Header from "../components/Header";
 import { useNavigate } from "react-router-dom";
-export default function ExhibitViewPage({ searchProps }) {
+export default function ExhibitViewPage() {
   const navigate = useNavigate();
   const { exhibitId } = useParams();
   const [exhibit, setExhibit] = useState(null);
@@ -29,7 +28,6 @@ export default function ExhibitViewPage({ searchProps }) {
 
   return (
     <>
-      <Header searchProps={searchProps} />
       {error ? (
         <p className="error">{error}, try again later?</p>
       ) : (

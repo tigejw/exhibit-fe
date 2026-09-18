@@ -17,9 +17,10 @@ export default function SearchResults({ results, error }) {
         >
           <div className="result-image-container">
             <img
-              src={artwork.primaryImageSmall}
-              alt={artwork.title || "Artwork image"}
-            />
+  src={artwork.primaryImageSmall}
+  alt={artwork.title || "Artwork image"}
+  referrerPolicy="no-referrer"
+/>
           </div>
           <div className="result-title">{artwork.title}</div>
           <div className="result-artist">{artwork.artistDisplayName}</div>
