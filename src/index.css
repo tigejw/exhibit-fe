@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-/* @import "./css/artworkView.css"; */
-/* @import "./css/exhibit.css"; */
-/* @import "./css/main.css"; */
-/* @import "./css/header.css"; */
-
 /* montserrat-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
