@@ -49,7 +49,7 @@ A web application for browsing and curating art exhibits from the Metropolitan M
   ```  npm run seed ``` 
 - Start the server with
   ``` npm run dev``` 
-- The API will be available at http://localhost:9090
+- The API will be available at http://localhost:9090 !
 
 
 Be aware that if you want to run the local front and backend together, 
