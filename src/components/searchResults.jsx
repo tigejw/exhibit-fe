@@ -15,7 +15,7 @@ export default function SearchResults({ results, error }) {
           onClick={() =>
             navigate(`/artwork/${artwork.objectID || artwork.artwork_id}`)
           }
-          className="flex max-w-full flex-col rounded-lg border-[0.8px] border-[#3b0000] bg-white p-4 text-left transition hover:-translate-y-1.5 hover:shadow-[0_14px_40px_rgba(17,17,17,0.1)] focus-visible:-translate-y-1.5 focus-visible:shadow-[0_14px_40px_rgba(17,17,17,0.1)]"
+          className="flex max-w-full flex-col rounded-lg border-[0.8px] border-[#3b0000] bg-neutral-100 p-4 text-left transition hover:-translate-y-1.5 hover:shadow-[0_14px_40px_rgba(17,17,17,0.1)] focus-visible:-translate-y-1.5 focus-visible:shadow-[0_14px_40px_rgba(17,17,17,0.1)]"
         >
           <div className="h-fit w-full aspect-[4/3] rounded-lg bg-neutral-200">
             <img
