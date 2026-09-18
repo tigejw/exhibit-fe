@@ -10,7 +10,7 @@ export default function SearchResultsPage({ results, loading, error }) {
 
         {error && (
           <p role="alert" className="text-red-600">
-            {error}, try again later?
+            {error}, try again later..?
           </p>
         )}
         {loading ? (

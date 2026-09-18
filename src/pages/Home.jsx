@@ -46,7 +46,7 @@ export default function HomePage({ exhibits, setExhibits, exhibitsLoading, error
         </div>
 
         {error ? (
-          <p className="text-red-600">{error}, try again later?</p>
+          <p className="text-red-600">{error}, try again later...?</p>
         ) : exhibitsLoading ? (
           <div className="py-12 text-center text-neutral-500">Loading exhibits...</div>
         ) : (

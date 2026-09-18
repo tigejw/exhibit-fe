@@ -38,6 +38,7 @@ function App() {
 
   const handleSearch = async () => {
     setLoading(true);
+    setError("");
     const params = new URLSearchParams();
     if (query) params.append("q", query);
     if (source) params.append("source", source);
