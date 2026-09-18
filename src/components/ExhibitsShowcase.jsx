@@ -44,7 +44,7 @@ export default function ExhibitShowcase({
               key={exhibit.exhibit_id}
               type="button"
               onClick={() => navigate(`/exhibit/${exhibit.exhibit_id}`)}
-              className="flex max-w-full flex-col rounded-lg border-[0.8px] border-[#3b0000] bg-gradient-to-b from-white to-[#ffeded] p-4 text-left transition hover:-translate-y-1.5 hover:shadow-[0_14px_40px_rgba(17,17,17,0.1)]"
+              className="flex max-w-full flex-col rounded-lg border-[0.8px] border-[#3b0000] p-4 text-left transition hover:-translate-y-1.5 hover:shadow-[0_14px_40px_rgba(17,17,17,0.1)]"
             >
               <div className="aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-200">
                 <img
